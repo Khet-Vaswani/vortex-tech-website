@@ -60,7 +60,7 @@ export default function Footer() {
             <div className="flex space-x-4">
               {/* LinkedIn */}
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/vortextech77/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full bg-slate-900 p-2 text-slate-400 hover:bg-slate-800 hover:text-vortex-cyan transition-colors"
