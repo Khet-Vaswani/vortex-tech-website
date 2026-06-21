@@ -74,7 +74,7 @@ export default function Contact() {
           <div className="flex flex-col justify-between space-y-8 rounded-2xl bg-card-bg p-8 border border-card-border">
             <div>
               <h2 className="text-xl font-bold text-white mb-6">Contact Information</h2>
-              
+
               <div className="space-y-6">
                 {/* Email Info */}
                 <div className="flex items-start space-x-4">
@@ -86,10 +86,7 @@ export default function Contact() {
                   <div>
                     <h3 className="text-sm font-semibold text-slate-300">Email Admissions</h3>
                     <p className="mt-1 text-sm text-slate-400 hover:text-white transition-colors">
-                      <a href="mailto:admissions@vortextech.com">admissions@vortextech.com</a>
-                    </p>
-                    <p className="mt-0.5 text-sm text-slate-400 hover:text-white transition-colors">
-                      <a href="mailto:support@vortextech.com">support@vortextech.com</a>
+                      <a href="mailto:vortextechnologies77@gmail.com">vortextechnologies77@gmail.com</a>
                     </p>
                   </div>
                 </div>
@@ -105,7 +102,7 @@ export default function Contact() {
                   <div>
                     <h3 className="text-sm font-semibold text-slate-300">Office Location</h3>
                     <p className="mt-1 text-sm text-slate-400 leading-relaxed">
-                      Vortex Tech HQ, Block 5, Gulshan-e-Iqbal,<br />
+                      Vortex Tech HQ, Gulshan-e-Iqbal,<br />
                       Karachi, Pakistan
                     </p>
                   </div>
@@ -162,9 +159,8 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="e.g. Fatima Ali"
-                    className={`mt-1.5 block w-full rounded-md border bg-slate-950 px-4 py-2 text-white placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-vortex-cyan focus:border-transparent ${
-                      errors.name ? "border-red-500" : "border-slate-800"
-                    }`}
+                    className={`mt-1.5 block w-full rounded-md border bg-slate-950 px-4 py-2 text-white placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-vortex-cyan focus:border-transparent ${errors.name ? "border-red-500" : "border-slate-800"
+                      }`}
                   />
                   {errors.name && <p className="mt-1 text-xs text-red-500">{errors.name}</p>}
                 </div>
@@ -180,9 +176,8 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="name@example.com"
-                    className={`mt-1.5 block w-full rounded-md border bg-slate-950 px-4 py-2 text-white placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-vortex-cyan focus:border-transparent ${
-                      errors.email ? "border-red-500" : "border-slate-800"
-                    }`}
+                    className={`mt-1.5 block w-full rounded-md border bg-slate-950 px-4 py-2 text-white placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-vortex-cyan focus:border-transparent ${errors.email ? "border-red-500" : "border-slate-800"
+                      }`}
                   />
                   {errors.email && <p className="mt-1 text-xs text-red-500">{errors.email}</p>}
                 </div>
@@ -198,9 +193,8 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Tell us what you need help with..."
-                    className={`mt-1.5 block w-full rounded-md border bg-slate-950 px-4 py-2 text-white placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-vortex-cyan focus:border-transparent ${
-                      errors.message ? "border-red-500" : "border-slate-800"
-                    }`}
+                    className={`mt-1.5 block w-full rounded-md border bg-slate-950 px-4 py-2 text-white placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-vortex-cyan focus:border-transparent ${errors.message ? "border-red-500" : "border-slate-800"
+                      }`}
                   ></textarea>
                   {errors.message && <p className="mt-1 text-xs text-red-500">{errors.message}</p>}
                 </div>
