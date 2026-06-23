@@ -119,9 +119,9 @@ export default function Contact() {
               <div className="flex space-x-3 text-sm text-vortex-cyan">
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn</a>
                 <span className="text-slate-800">&bull;</span>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:underline">Instagram</a>
+                {/* <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:underline">Instagram</a>
                 <span className="text-slate-800">&bull;</span>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:underline">GitHub Org</a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:underline">GitHub Org</a> */}
               </div>
             </div>
           </div>
