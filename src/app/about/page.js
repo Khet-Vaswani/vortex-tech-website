@@ -22,7 +22,7 @@ export default function About() {
         </div>
 
         {/* Stats Grid */}
-        <div className="mx-auto max-w-5xl mb-24 rounded-2xl bg-card-bg p-8 border border-card-border">
+        {/* <div className="mx-auto max-w-5xl mb-24 rounded-2xl bg-card-bg p-8 border border-card-border">
           <dl className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-3 text-center">
             <div className="flex flex-col items-center">
               <dt className="text-sm font-semibold leading-6 text-slate-400 uppercase tracking-wider">Active Interns</dt>
@@ -37,7 +37,7 @@ export default function About() {
               <dd className="mt-2 text-4xl font-extrabold tracking-tight text-vortex-cyan glow-text-cyan">85%</dd>
             </div>
           </dl>
-        </div>
+        </div> */}
 
         {/* What Makes Us Different */}
         <div className="mx-auto max-w-5xl mb-24">
