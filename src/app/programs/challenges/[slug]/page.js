@@ -51,7 +51,7 @@ export default async function ChallengeDetailPage({ params }) {
                 Register Here (₨ 299 Fee)
               </a>
               <div className="inline-flex items-center text-xs text-slate-400">
-                Deadline: <span className="text-white ml-1 font-semibold">July 31, 2026</span>
+                Deadline: <span className="text-white ml-1 font-semibold">July 10, 2026</span>
               </div>
             </div>
           </div>

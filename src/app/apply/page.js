@@ -2,6 +2,10 @@
 
 import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
+import Link from "next/link";
+
+// Toggle this to easily open or close internship registration
+const IS_REGISTRATION_CLOSED = true;
 
 function ApplyForm() {
   const searchParams = useSearchParams();
@@ -25,6 +29,11 @@ function ApplyForm() {
 
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState({});
+
+  // Waitlist form state
+  const [waitlistEmail, setWaitlistEmail] = useState("");
+  const [waitlistSubmitted, setWaitlistSubmitted] = useState(false);
+  const [waitlistError, setWaitlistError] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -58,11 +67,111 @@ function ApplyForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      // Mock submit success state
       setSubmitted(true);
     }
   };
 
+  const handleWaitlistSubmit = (e) => {
+    e.preventDefault();
+    if (!waitlistEmail.trim()) {
+      setWaitlistError("Email address is required");
+      return;
+    }
+    if (!/\S+@\S+\.\S+/.test(waitlistEmail)) {
+      setWaitlistError("Please enter a valid email address");
+      return;
+    }
+    setWaitlistError("");
+    setWaitlistSubmitted(true);
+  };
+
+  // If registration is closed, show the closed / waitlist view
+  if (IS_REGISTRATION_CLOSED) {
+    return (
+      <div className="mx-auto max-w-3xl px-6 py-16 sm:py-24 lg:px-8">
+        <div className="rounded-2xl bg-card-bg p-8 sm:p-12 border border-card-border shadow-2xl relative overflow-hidden text-center">
+          <div className="absolute -right-16 -top-16 w-48 h-48 rounded-full bg-vortex-blue/10 blur-2xl"></div>
+          <div className="absolute -left-16 -bottom-16 w-48 h-48 rounded-full bg-vortex-cyan/5 blur-2xl"></div>
+
+          <div className="relative">
+            {/* Status Badge */}
+            <span className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold bg-rose-500/10 text-rose-400 border border-rose-500/20 uppercase tracking-wider mb-6">
+              Batch 1 Cohort Closed
+            </span>
+
+            {/* Main Header */}
+            <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+              Internship Registration{" "}
+              <span className="bg-gradient-to-r from-vortex-blue to-vortex-cyan bg-clip-text text-transparent">
+                Closed
+              </span>
+            </h1>
+
+            {/* Explanatory Text */}
+            <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto">
+              Thank you for your overwhelming interest! Applications for our inaugural project-based internship cohort (Batch 1) are officially closed. 
+              Our admissions team is currently reviewing the profiles and will be contacting short-listed candidates soon.
+            </p>
+
+            <div className="mt-8 border-t border-slate-800/80 pt-8 max-w-md mx-auto">
+              {waitlistSubmitted ? (
+                <div className="rounded-xl bg-emerald-500/5 border border-emerald-500/20 p-6 text-emerald-400">
+                  <svg className="h-8 w-8 mx-auto mb-2 text-emerald-400" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.746 3.746 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                  </svg>
+                  <h4 className="font-bold text-white text-base">Added to Waitlist!</h4>
+                  <p className="text-xs text-slate-400 mt-1">We will email you at <span className="text-slate-300 font-semibold">{waitlistEmail}</span> as soon as Batch 2 applications open.</p>
+                </div>
+              ) : (
+                <div>
+                  <h3 className="text-sm font-semibold text-white mb-2">Join the Waitlist for Batch 2</h3>
+                  <p className="text-xs text-slate-400 mb-4">Be the first to get notified and receive early-bird benefits when our next cohort cohort registrations launch.</p>
+                  <form onSubmit={handleWaitlistSubmit} className="flex flex-col sm:flex-row gap-2">
+                    <div className="flex-grow">
+                      <input
+                        type="email"
+                        placeholder="Enter your email address"
+                        value={waitlistEmail}
+                        onChange={(e) => setWaitlistEmail(e.target.value)}
+                        className={`w-full rounded-md border bg-slate-950 px-4 py-2.5 text-white placeholder-slate-600 text-sm focus:outline-none focus:ring-2 focus:ring-vortex-cyan focus:border-transparent ${
+                          waitlistError ? "border-rose-500" : "border-slate-800"
+                        }`}
+                      />
+                      {waitlistError && <p className="text-left text-xs text-rose-500 mt-1">{waitlistError}</p>}
+                    </div>
+                    <button
+                      type="submit"
+                      className="rounded-md bg-gradient-to-r from-vortex-blue to-vortex-cyan px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-vortex-blue/20 hover:brightness-110 transition-all shrink-0 h-fit"
+                    >
+                      Notify Me
+                    </button>
+                  </form>
+                </div>
+              )}
+            </div>
+
+            {/* Alternative Actions */}
+            <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/programs/challenges"
+                className="w-full sm:w-auto rounded-md bg-slate-900 border border-slate-850 px-6 py-2.5 text-sm font-semibold text-white hover:bg-slate-850 transition-all text-center"
+              >
+                Join Design Challenges
+              </Link>
+              <Link
+                href="/programs/internships"
+                className="w-full sm:w-auto text-sm font-semibold text-vortex-cyan hover:text-white px-6 py-2.5 text-center transition-all"
+              >
+                Browse Internship Tracks &rarr;
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Original Form view when registration is open
   if (submitted) {
     return (
       <div className="mx-auto max-w-2xl px-6 py-24 text-center">

@@ -7,7 +7,7 @@ export default function ChallengesPage() {
       title: "Vortex Tech Design Challenge 2026",
       pitch: "Showcase your UI/UX and graphic design talent. Design our next-gen developer portfolio interfaces or marketing creatives using Canva, Photoshop, Illustrator, or Figma.",
       prize: " Cash Prizes & Certificates",
-      deadline: "July 31, 2026",
+      deadline: "July 10, 2026",
       status: "Active",
       statusColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
     }
