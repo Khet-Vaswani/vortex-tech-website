@@ -9,7 +9,7 @@ function ApplyForm() {
   // Pre-select track from query parameter synchronously during initial render
   const getInitialTrack = () => {
     const trackParam = searchParams.get("track");
-    const validTracks = ["web-dev", "ai-ml", "data-science", "cyber-security", "ui-ux", "app-dev"];
+    const validTracks = ["web-dev", "ai-ml", "data-science", "cyber-security", "ui-ux", "app-dev", "software-engineering"];
     return (trackParam && validTracks.includes(trackParam)) ? trackParam : "";
   };
 
@@ -83,6 +83,7 @@ function ApplyForm() {
             {formData.track === "cyber-security" && "Cyber Security"}
             {formData.track === "ui-ux" && "UI/UX"}
             {formData.track === "app-dev" && "App Development"}
+            {formData.track === "software-engineering" && "Software Engineering"}
           </span>{" "}
           track.
         </p>
@@ -212,6 +213,7 @@ function ApplyForm() {
               <option value="cyber-security">Cyber Security</option>
               <option value="ui-ux">UI/UX</option>
               <option value="app-dev">App Development</option>
+              <option value="software-engineering">Software Engineering</option>
             </select>
             {errors.track && <p className="mt-1 text-xs text-red-500">{errors.track}</p>}
           </div>

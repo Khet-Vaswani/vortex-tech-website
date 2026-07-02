@@ -27,13 +27,19 @@ export default function Footer() {
                 <Link href="/" className="hover:text-vortex-cyan transition-colors">Home</Link>
               </li>
               <li>
-                <Link href="/tracks" className="hover:text-vortex-cyan transition-colors">Internship Tracks</Link>
+                <Link href="/programs/internships" className="hover:text-vortex-cyan transition-colors">Internships</Link>
+              </li>
+              <li>
+                <Link href="/programs/challenges" className="hover:text-vortex-cyan transition-colors">Challenges</Link>
+              </li>
+              <li>
+                <Link href="/services" className="hover:text-vortex-cyan transition-colors">B2B Services</Link>
               </li>
               <li>
                 <Link href="/verify" className="hover:text-vortex-cyan transition-colors">Verify Certificate</Link>
               </li>
               <li>
-                <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeG5BMlK39BVkMVnqvXkJhEVO98Kj1Mmz2fXNf9i55OxS08-A/viewform?usp=header" target="_blank" rel="noopener noreferrer" className="hover:text-vortex-cyan transition-colors">Apply Now</Link>
+                <Link href="/apply" className="hover:text-vortex-cyan transition-colors">Apply Now</Link>
               </li>
             </ul>
           </div>

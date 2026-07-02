@@ -7,8 +7,19 @@ export default function Home() {
       <div className="absolute top-20 left-1/4 -z-10 h-72 w-72 rounded-full bg-vortex-blue/10 blur-3xl animate-pulse-glow"></div>
       <div className="absolute top-40 right-1/4 -z-10 h-96 w-96 rounded-full bg-vortex-cyan/10 blur-3xl animate-pulse-glow" style={{ animationDelay: "2s" }}></div>
 
+      {/* Featured Banner/Strip */}
+      <div className="bg-gradient-to-r from-vortex-blue/20 via-slate-900 to-vortex-cyan/20 border-b border-slate-800 py-3 px-4 text-center">
+        <Link 
+          href="/programs/challenges/design-challenge-2026"
+          className="inline-flex items-center space-x-2 text-sm font-semibold text-vortex-cyan hover:text-white transition-colors"
+        >
+          <span className="flex h-2 w-2 rounded-full bg-vortex-cyan animate-ping"></span>
+          <span>Featured: Vortex Tech Design Challenge 2026 — Register Now &rarr;</span>
+        </Link>
+      </div>
+
       {/* Hero Section */}
-      <section className="relative px-6 pt-20 pb-24 sm:pt-32 lg:px-8 lg:pb-32">
+      <section className="relative px-6 pt-16 pb-20 sm:pt-24 lg:px-8 lg:pb-24">
         <div className="mx-auto max-w-4xl text-center">
           {/* Badge */}
           <div className="inline-flex items-center space-x-2 rounded-full border border-vortex-cyan/30 bg-vortex-cyan/5 px-3 py-1 text-xs font-semibold tracking-wide text-vortex-cyan uppercase">
@@ -22,25 +33,96 @@ export default function Home() {
             </span>
           </h1>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-400 sm:text-xl">
-            Vortex Tech provides hands-on IT internships with real project work, individual mentorship, and performance-based certificates. Build a portfolio that stands out.
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-400 sm:text-xl">
+            Vortex Tech bridges the gap between talent and industry. Launch your career with hands-on IT internships, prove your capability in national design challenges, or partner with us for premium IT consulting and digital transformation services.
           </p>
 
-          <div className="mt-10 flex items-center justify-center gap-x-6">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <Link
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeG5BMlK39BVkMVnqvXkJhEVO98Kj1Mmz2fXNf9i55OxS08-A/viewform?usp=header"
-              target="_blank" rel="noopener noreferrer"
+              href="/apply"
               className="rounded-md bg-gradient-to-r from-vortex-blue to-vortex-cyan px-8 py-3.5 text-base font-semibold text-white shadow-lg glow-button-blue"
             >
               Apply Now
             </Link>
             <Link
-              href="/tracks"
+              href="/programs/internships"
               className="rounded-md border border-slate-700 hover:border-vortex-cyan px-8 py-3.5 text-base font-semibold text-slate-300 hover:text-white transition-all bg-slate-900/50 backdrop-blur"
             >
-              Explore Tracks &rarr;
+              Explore Programs &rarr;
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* What We Offer Section */}
+      <section className="mx-auto max-w-7xl px-6 py-16 lg:px-8 border-t border-slate-900/80">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">What We Offer</h2>
+          <p className="mt-4 text-base text-slate-400">
+            Tailored pathways designed for students, developers, and businesses alike.
+          </p>
+        </div>
+
+        <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-8 sm:grid-cols-3">
+          {[
+            {
+              title: "Internships",
+              desc: "Project-based tracks in software engineering, AI, cyber security, and design.",
+              link: "/programs/internships",
+              linkText: "Learn More",
+              icon: (
+                <svg className="h-8 w-8 text-vortex-cyan" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.62 48.62 0 0112 20.904a48.62 48.62 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A5.905 5.905 0 018 3.988.49.49 0 018 4.5v.793c.026.009.051.02.076.032z" />
+                </svg>
+              ),
+            },
+            {
+              title: "Challenges & Competitions",
+              desc: "Compete in live coding and design challenges. Earn cash prizes and showcase your work.",
+              link: "/programs/challenges",
+              linkText: "Explore Challenges",
+              icon: (
+                <svg className="h-8 w-8 text-vortex-cyan" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.504-1.125-1.125-1.125h-.75a1.125 1.125 0 01-1.125-1.125V11.25M10.5 7.5a3 3 0 116 0c0 .332-.054.65-.154.949m-5.696-2.899c.3-.921.755-1.78 1.345-2.525M12 21a9.003 9.003 0 008.354-5.646 9.003 9.003 0 00-8.354.646V21z" />
+                </svg>
+              ),
+            },
+            {
+              title: "IT Consulting & Services",
+              desc: "Enterprise-grade development, systems architecture, and managed IT services.",
+              link: "/services",
+              linkText: "Our Services",
+              icon: (
+                <svg className="h-8 w-8 text-vortex-cyan" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h18v3H3V3z" />
+                </svg>
+              ),
+            },
+          ].map((card) => (
+            <div
+              key={card.title}
+              className="flex flex-col justify-between rounded-2xl bg-card-bg p-6 border border-card-border hover:border-vortex-cyan/40 transition-all duration-300 group"
+            >
+              <div>
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-900 border border-slate-800 mb-5">
+                  {card.icon}
+                </div>
+                <h3 className="text-lg font-bold text-white group-hover:text-vortex-cyan transition-colors">
+                  {card.title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-slate-400">{card.desc}</p>
+              </div>
+              <div className="mt-6 pt-4 border-t border-slate-800/60">
+                <Link
+                  href={card.link}
+                  className="text-xs font-semibold text-vortex-cyan hover:text-white transition-colors flex items-center space-x-1"
+                >
+                  <span>{card.linkText}</span>
+                  <span>&rarr;</span>
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -49,7 +131,7 @@ export default function Home() {
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">How It Works</h2>
           <p className="mt-4 text-base text-slate-400">
-            A comprehensive, 4-step project cycle designed to replicate actual IT workloads in top companies.
+            A structured project lifecycle (primarily designed for our student internships) to simulate production environment conditions.
           </p>
         </div>
 
@@ -58,22 +140,22 @@ export default function Home() {
             {
               step: "01",
               title: "Apply",
-              desc: "Select your track (Web Dev, AI&ML, App Dev), submit your details, and state your learning goals.",
+              desc: "Select your track, submit details, and specify learning goals on our application page.",
             },
             {
               step: "02",
               title: "Get Project Brief",
-              desc: "Get assigned to a structured repository containing professional requirements and feature specs.",
+              desc: "Receive structured repositories detailing industry-standard feature specifications.",
             },
             {
               step: "03",
               title: "Submit on GitHub",
-              desc: "Write clean code, structure commits, and open pull requests. Experience realistic workflow standards.",
+              desc: "Write clean code, structure commits, and open pull requests for realistic code workflows.",
             },
             {
               step: "04",
               title: "Get Reviewed & Certified",
-              desc: "Get line-by-line code reviews from experts. Earn verification certificates and letters of recommendation.",
+              desc: "Earn code reviews, a shareable digital certificate, and recommendation letters for top performers.",
             },
           ].map((item) => (
             <div
@@ -158,70 +240,61 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Tracks Preview Section */}
+      {/* Programs Preview Section */}
       <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8 border-t border-slate-900">
-        <div className="flex flex-col md:flex-row md:items-end justify-between">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Featured Tracks</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Explore Vortex Programs</h2>
             <p className="mt-4 text-base text-slate-400 max-w-xl">
-              Apply to specific disciplines. Expand your skills under guidance with structured curriculums.
+              Gain professional experience through guided internship tracks, or test your design capabilities in global challenges.
             </p>
           </div>
-          <Link
-            href="/tracks"
-            className="mt-6 md:mt-0 text-sm font-semibold text-vortex-cyan hover:underline inline-flex items-center space-x-1"
-          >
-            <span>View All Tracks</span>
-            <span>&rarr;</span>
-          </Link>
         </div>
 
-        <div className="mx-auto mt-12 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          {[
-            {
-              title: "Web Development",
-              desc: "Master modern frontend frameworks like React and Next.js, along with robust API endpoints and MongoDB/PostgreSQL integrations.",
-              level: "Intermediate",
-              badgeColor: "text-emerald-400 bg-emerald-500/10 border-emerald-500/20",
-            },
-            {
-              title: "AI&ML",
-              desc: "Work on neural networks, pipeline orchestration, natural language processing, and predictive models using TensorFlow and PyTorch.",
-              level: "Advanced",
-              badgeColor: "text-amber-400 bg-amber-500/10 border-amber-500/20",
-            },
-            {
-              title: "App Development",
-              desc: "Create cross-platform mobile apps for iOS and Android. Master state management, responsive UI, and robust API integrations.",
-              level: "Intermediate",
-              badgeColor: "text-purple-400 bg-purple-500/10 border-purple-500/20",
-            },
-          ].map((track) => (
-            <div
-              key={track.title}
-              className="flex flex-col justify-between rounded-2xl bg-card-bg p-6 border border-card-border hover:glow-border-cyan transition-all duration-300"
-            >
-              <div>
-                <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium border ${track.badgeColor}`}>
-                  {track.level}
-                </span>
-                <h3 className="mt-4 text-xl font-bold text-white">{track.title}</h3>
-                <p className="mt-2 text-sm text-slate-400 leading-relaxed">{track.desc}</p>
-              </div>
-              <div className="mt-8 pt-4 border-t border-slate-800">
-                <Link
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSeG5BMlK39BVkMVnqvXkJhEVO98Kj1Mmz2fXNf9i55OxS08-A/viewform?usp=header"
-                  target="_blank" rel="noopener noreferrer"
-                  className="block text-center text-sm font-semibold text-vortex-cyan hover:text-white hover:bg-vortex-cyan/15 rounded-md py-2 border border-vortex-cyan/30 hover:border-vortex-cyan transition-all"
-                >
-                  Apply For This Track
-                </Link>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Internships Preview Card */}
+          <div className="flex flex-col justify-between rounded-2xl bg-card-bg p-8 border border-card-border hover:glow-border-cyan transition-all duration-300">
+            <div>
+              <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                Internships
+              </span>
+              <h3 className="mt-4 text-2xl font-bold text-white">IT Internship Tracks</h3>
+              <p className="mt-3 text-sm text-slate-400 leading-relaxed">
+                Structured 8-to-16-week remote tracks designed to mimic modern development environments. Tracks include Web Dev, AI & Data, Software Engineering, Cyber Security, and UI/UX.
+              </p>
             </div>
-          ))}
+            <div className="mt-8 pt-4 border-t border-slate-800">
+              <Link
+                href="/programs/internships"
+                className="block text-center text-sm font-semibold text-vortex-cyan hover:text-white hover:bg-vortex-cyan/15 rounded-md py-2.5 border border-vortex-cyan/30 hover:border-vortex-cyan transition-all"
+              >
+                Browse Internship Tracks &rarr;
+              </Link>
+            </div>
+          </div>
+
+          {/* Challenges Preview Card */}
+          <div className="flex flex-col justify-between rounded-2xl bg-card-bg p-8 border border-card-border hover:glow-border-cyan transition-all duration-300">
+            <div>
+              <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                Challenges
+              </span>
+              <h3 className="mt-4 text-2xl font-bold text-white">Design & Coding Competitions</h3>
+              <p className="mt-3 text-sm text-slate-400 leading-relaxed">
+                Compete against designers and engineers globally to build stunning products and win cash prizes. Showcase your capabilities to top-tier employers.
+              </p>
+            </div>
+            <div className="mt-8 pt-4 border-t border-slate-800">
+              <Link
+                href="/programs/challenges"
+                className="block text-center text-sm font-semibold text-vortex-cyan hover:text-white hover:bg-vortex-cyan/15 rounded-md py-2.5 border border-vortex-cyan/30 hover:border-vortex-cyan transition-all"
+              >
+                View Active Challenges &rarr;
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </div>
   );
 }
-
