@@ -258,7 +258,7 @@ const MOCK_CERTIFICATES = [
     track: "AI & ML",
     completionDate: "2026-07-31",
     grade: "A",
-    credentialUrl: "https://github.com/vortex-tech",
+    credentialUrl: "",
   },
   {
     id: "VT-2026-07-33",
@@ -344,6 +344,14 @@ const MOCK_CERTIFICATES = [
     id: "VT-2026-07-43",
     studentName: "Arooj Fatima Rizvi",
     track: "Cyber Security",
+    completionDate: "2026-07-31",
+    grade: "A",
+    credentialUrl: "https://github.com/vortex-tech",
+  },
+  {
+    id: "VT-2026-07-44",
+    studentName: "Muhammad Zain Iftikhar",
+    track: "Web Development",
     completionDate: "2026-07-31",
     grade: "A",
     credentialUrl: "https://github.com/vortex-tech",
@@ -471,18 +479,7 @@ export default function Verify() {
                   <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-500">Grade Achieved</h3>
                   <p className="mt-1 font-semibold text-emerald-400">{certData.grade}</p>
                 </div>
-                <div className="md:col-span-2 pt-4 border-t border-slate-800/50 mt-2">
-                  <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-500">GitHub Contributions</h3>
-                  <a
-                    href={certData.credentialUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-1 text-xs text-vortex-cyan hover:underline inline-flex items-center space-x-1"
-                  >
-                    <span>View verified repository fork</span>
-                    <span>&rarr;</span>
-                  </a>
-                </div>
+
               </div>
             </div>
           )}
