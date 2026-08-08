@@ -355,6 +355,14 @@ const MOCK_CERTIFICATES = [
     completionDate: "2026-07-31",
     grade: "A",
     credentialUrl: "https://github.com/vortex-tech",
+  },
+  {
+    id: "VT-2026-07-45",
+    studentName: "Arslan Ali",
+    track: "UI/UX",
+    completionDate: "2026-08-01",
+    grade: "A",
+    credentialUrl: "https://github.com/vortex-tech",
   }
 ];
 
