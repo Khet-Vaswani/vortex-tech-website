@@ -60,8 +60,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeG5BMlK39BVkMVnqvXkJhEVO98Kj1Mmz2fXNf9i55OxS08-A/viewform?usp=header"
-              target="_blank" rel="noopener noreferrer"
+              href="/apply"
               className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-vortex-blue to-vortex-cyan px-4 py-2 text-sm font-semibold text-white shadow-lg glow-button-blue"
             >
               Apply Now
@@ -123,8 +122,7 @@ export default function Navbar() {
           ))}
           <div className="pt-2">
             <Link
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeG5BMlK39BVkMVnqvXkJhEVO98Kj1Mmz2fXNf9i55OxS08-A/viewform?usp=header"
-              target="_blank" rel="noopener noreferrer"
+              href="/apply"
               onClick={() => setIsOpen(false)}
               className="block w-full text-center rounded-md bg-gradient-to-r from-vortex-blue to-vortex-cyan px-4 py-2.5 text-base font-semibold text-white shadow-lg shadow-vortex-blue/20"
             >
