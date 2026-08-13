@@ -86,7 +86,7 @@ export default function Contact() {
                   <div>
                     <h3 className="text-sm font-semibold text-slate-300">Email Admissions</h3>
                     <p className="mt-1 text-sm text-slate-400 hover:text-white transition-colors">
-                      <a href="mailto:vortextechnologies77@gmail.com">vortextechnologies77@gmail.com</a>
+                      <a href="mailto:[EMAIL_ADDRESS]">hr@vortextech.work</a>
                     </p>
                   </div>
                 </div>
