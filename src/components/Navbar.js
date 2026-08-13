@@ -32,32 +32,13 @@ export default function Navbar() {
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
-            {/* Custom SVG Spiral/Vortex Circuit-style Logo */}
-            <div className="relative flex h-11 w-11 items-center justify-center rounded-lg bg-slate-900/50 p-1 ring-1 ring-slate-800 transition-all duration-300 group-hover:ring-vortex-cyan/50">
-              <svg
-                viewBox="0 0 100 100"
-                className="h-9 w-9 animate-pulse-glow"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <defs>
-                  <linearGradient id="vortexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#0066ff" />
-                    <stop offset="100%" stopColor="#00d4ff" />
-                  </linearGradient>
-                </defs>
-                {/* Spiral Circuit paths */}
-                <path
-                  d="M50 15 C30 15, 15 30, 15 50 C15 70, 30 85, 50 85 C65 85, 78 75, 82 60 C83 55, 80 50, 75 50 C70 50, 68 53, 67 56 C64 66, 56 72, 47 70 C38 68, 30 58, 32 48 C34 38, 44 32, 53 34 C60 36, 65 42, 65 49 C65 53, 62 56, 58 56 C54 56, 52 53, 52 50 C52 47, 48 45, 45 47 C42 49, 42 53, 44 56 C47 60, 53 62, 58 60 C64 58, 70 50, 69 42 C68 32, 58 24, 47 26 C34 28, 24 40, 26 54 C28 68, 42 78, 56 76 C70 74, 80 62, 80 48"
-                  stroke="url(#vortexGrad)"
-                  strokeWidth="6"
-                  strokeLinecap="round"
-                />
-                {/* Circuit nodes (circles) */}
-                <circle cx="50" cy="15" r="4.5" fill="#00d4ff" />
-                <circle cx="58" cy="56" r="3.5" fill="#0066ff" />
-                <circle cx="45" cy="47" r="3.5" fill="#00d4ff" />
-              </svg>
+            {/* New Logo Image */}
+            <div className="relative flex h-11 w-11 items-center justify-center rounded-lg bg-slate-900/50 overflow-hidden ring-1 ring-slate-800 transition-all duration-300 group-hover:ring-vortex-cyan/50">
+              <img
+                src="/logo.jpg"
+                alt="Vortex Tech Logo"
+                className="h-10 w-10 object-cover"
+              />
             </div>
             <span className="text-xl font-bold tracking-tight text-white group-hover:text-vortex-cyan transition-colors">
               VORTEX<span className="bg-gradient-to-r from-vortex-blue to-vortex-cyan bg-clip-text text-transparent">TECH</span>
