@@ -363,6 +363,190 @@ const MOCK_CERTIFICATES = [
     completionDate: "2026-08-01",
     grade: "A",
     credentialUrl: "https://github.com/vortex-tech",
+  },
+  {
+    id: "VT-2026-09-1",
+    studentName: "Noor Dawood Shah",
+    track: "Cyber Security",
+    completionDate: "2026-09-30",
+    grade: "A",
+    credentialUrl: "https://github.com/vortex-tech",
+  },
+  {
+    id: "VT-2026-09-2",
+    studentName: "Muhammad Usman",
+    track: "Cyber Security",
+    completionDate: "2026-09-30",
+    grade: "A",
+    credentialUrl: "https://github.com/vortex-tech",
+  },
+  {
+    id: "VT-2026-09-3",
+    studentName: "Abdul Majid",
+    track: "Cyber Security",
+    completionDate: "2026-09-30",
+    grade: "A",
+    credentialUrl: "https://github.com/vortex-tech",
+  },
+  {
+    id: "VT-2026-09-4",
+    studentName: "Asad Ali",
+    track: "Cyber Security",
+    completionDate: "2026-09-30",
+    grade: "A",
+    credentialUrl: "https://github.com/vortex-tech",
+  },
+  {
+    id: "VT-2026-09-5",
+    studentName: "Fatima Noor",
+    track: "Cyber Security",
+    completionDate: "2026-09-30",
+    grade: "A",
+    credentialUrl: "https://github.com/vortex-tech",
+  },
+  {
+    id: "VT-2026-09-6",
+    studentName: "Mouzama Batool",
+    track: "Cyber Security",
+    completionDate: "2026-09-30",
+    grade: "A",
+    credentialUrl: "https://github.com/vortex-tech",
+  },
+  {
+    id: "VT-2026-09-7",
+    studentName: "Teham Irfan",
+    track: "Cyber Security",
+    completionDate: "2026-09-30",
+    grade: "A",
+    credentialUrl: "https://github.com/vortex-tech",
+  },
+  {
+    id: "VT-2026-09-8",
+    studentName: "Arman Haider",
+    track: "Cyber Security",
+    completionDate: "2026-09-30",
+    grade: "A",
+    credentialUrl: "https://github.com/vortex-tech",
+  },
+  {
+    id: "VT-2026-09-9",
+    studentName: "Maqsood Hussain",
+    track: "Cyber Security",
+    completionDate: "2026-09-30",
+    grade: "A",
+    credentialUrl: "https://github.com/vortex-tech",
+  },
+  {
+    id: "VT-2026-09-10",
+    studentName: "Noor Fatima",
+    track: "Cyber Security",
+    completionDate: "2026-09-30",
+    grade: "A",
+    credentialUrl: "https://github.com/vortex-tech",
+  },
+  {
+    id: "VT-2026-09-11",
+    studentName: "Rafay Hadi Hussain",
+    track: "Cyber Security",
+    completionDate: "2026-09-30",
+    grade: "A",
+    credentialUrl: "https://github.com/vortex-tech",
+  },
+  {
+    id: "VT-2026-09-12",
+    studentName: "Abdul Hadi Faheem",
+    track: "Cyber Security",
+    completionDate: "2026-09-30",
+    grade: "A",
+    credentialUrl: "https://github.com/vortex-tech",
+  },
+  {
+    id: "VT-2026-09-13",
+    studentName: "Maryam Ijaz",
+    track: "AI & ML",
+    completionDate: "2026-09-30",
+    grade: "A",
+    credentialUrl: "https://github.com/vortex-tech",
+  },
+  {
+    id: "VT-2026-09-14",
+    studentName: "Attia Qamar-un-nisa",
+    track: "AI & ML",
+    completionDate: "2026-09-30",
+    grade: "A",
+    credentialUrl: "https://github.com/vortex-tech",
+  },
+  {
+    id: "VT-2026-09-15",
+    studentName: "Muhammad Shoaib",
+    track: "AI & ML",
+    completionDate: "2026-09-30",
+    grade: "A",
+    credentialUrl: "https://github.com/vortex-tech",
+  },
+  {
+    id: "VT-2026-09-16",
+    studentName: "Madhubala Khatri",
+    track: "AI & ML",
+    completionDate: "2026-09-30",
+    grade: "A",
+    credentialUrl: "https://github.com/vortex-tech",
+  },
+  {
+    id: "VT-2026-09-17",
+    studentName: "Abdul Wahab",
+    track: "AI & ML",
+    completionDate: "2026-09-30",
+    grade: "A",
+    credentialUrl: "https://github.com/vortex-tech",
+  },
+  {
+    id: "VT-2026-09-18",
+    studentName: "Ayesha Azeem",
+    track: "AI & ML",
+    completionDate: "2026-09-30",
+    grade: "A",
+    credentialUrl: "https://github.com/vortex-tech",
+  },
+  {
+    id: "VT-2026-09-19",
+    studentName: "Aleeza Muqadas",
+    track: "Web Development",
+    completionDate: "2026-09-30",
+    grade: "A",
+    credentialUrl: "https://github.com/vortex-tech",
+  },
+  {
+    id: "VT-2026-09-20",
+    studentName: "Rabbia Ejaz",
+    track: "Web Development",
+    completionDate: "2026-09-30",
+    grade: "A",
+    credentialUrl: "https://github.com/vortex-tech",
+  },
+  {
+    id: "VT-2026-09-21",
+    studentName: "Abdul Rehman Shahid",
+    track: "Data Science & Analytics",
+    completionDate: "2026-09-30",
+    grade: "A",
+    credentialUrl: "https://github.com/vortex-tech",
+  },
+  {
+    id: "VT-2026-09-22",
+    studentName: "Hafiz Muhammad Mahad Hussain",
+    track: "Data Science & Analytics",
+    completionDate: "2026-09-30",
+    grade: "A",
+    credentialUrl: "https://github.com/vortex-tech",
+  },
+  {
+    id: "VT-2026-09-23",
+    studentName: "Rizwan Soomro",
+    track: "UI & UX",
+    completionDate: "2026-09-30",
+    grade: "A",
+    credentialUrl: "https://github.com/vortex-tech",
   }
 ];
 
@@ -374,12 +558,17 @@ export default function Verify() {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    if (!certId.trim()) return;
+    const query = certId.trim().toUpperCase();
+    if (!query) return;
 
     setHasSearched(true);
-    const found = MOCK_CERTIFICATES.find(
-      (c) => c.id.toUpperCase() === certId.trim().toUpperCase()
-    );
+    // Normalize IDs (e.g. VT-2026-09-1 vs VT-2026-09-01)
+    const normalize = (val) => val.replace(/-0*(\d+)/g, (match, p1) => `-${p1}`);
+
+    const found = MOCK_CERTIFICATES.find((c) => {
+      const cId = c.id.toUpperCase();
+      return cId === query || normalize(cId) === normalize(query);
+    });
 
     if (found) {
       setResult("valid");
@@ -412,7 +601,7 @@ export default function Verify() {
             </span>
           </h1>
           <p className="mt-4 text-base text-slate-400">
-            Enter the unique credential identifier (e.g., VT-2026-07-01) to verify the authenticity of certificates issued by Vortex Tech.
+            Enter the unique credential identifier (e.g., VT-2026-09-1 or VT-2026-07-01) to verify the authenticity of certificates issued by Vortex Tech.
           </p>
         </div>
 
@@ -428,7 +617,7 @@ export default function Verify() {
               required
               value={certId}
               onChange={(e) => setCertId(e.target.value)}
-              placeholder="e.g. VT-2026-07-01"
+              placeholder="e.g. VT-2026-09-1"
               className="min-w-0 flex-auto rounded-md border border-slate-800 bg-slate-950 px-4 py-2.5 text-white placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-vortex-cyan focus:border-transparent"
             />
             <button
@@ -442,7 +631,7 @@ export default function Verify() {
           {/* Quick Helper */}
           {!hasSearched && (
             <p className="mt-3 text-center text-xs text-slate-500">
-              Try testing with: <span className="text-slate-400 font-mono">VT-2026-07-01</span> or <span className="text-slate-400 font-mono">VT-2026-07-03</span>
+              Try testing with: <span className="text-slate-400 font-mono">VT-2026-09-1</span> or <span className="text-slate-400 font-mono">VT-2026-07-01</span>
             </p>
           )}
         </div>
